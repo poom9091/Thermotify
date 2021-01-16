@@ -10,10 +10,11 @@
 
     <transition name="slide-navbar">
       <NavBar v-if="showNavbar" 
-      v-closable="{
-        exclude: ['NavBar'],
-        handler: 'onClose'
-      }" />
+        v-closable="{
+          exclude: ['NavBar'],
+          handler: 'onClose'
+        }"
+      />
     </transition>
   </div>
 </template>
@@ -34,7 +35,15 @@ export default {
     onClose(){
       this.showNavbar=false
     }
+  },
+  created(){
+    let userID = this.$store.getters.getUserID
+    console.log(userID)
+    if(userID == 'null'){
+      this.$router.push('/login')
+    }
   }
+  
 }
 </script>
 <style>

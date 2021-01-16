@@ -6,7 +6,11 @@ module.exports = {
       colors:{
         'bgcolor':'#020624',
         'bgNavBar':'#171525',
-        'textcolot':''
+        'Logo-l':'#C69DFF',
+        'Logo-r':'#4F76FF',
+        'color-line':'#00C300',
+        'color-line-hover':'#00E000'
+  
       },
       fontFamily: {
         Prompt: [

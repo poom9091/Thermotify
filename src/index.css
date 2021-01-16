@@ -10,4 +10,11 @@
     .style-icon{
         @apply fill-current w-5 text-white inline-block;
     }
+    .text-gradient {
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .text_logo{
+        @apply  font-bold text-gradient bg-gradient-to-r from-Logo-l  to-Logo-r max-w-max w-auto 
+    }
 }
