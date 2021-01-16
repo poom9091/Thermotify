@@ -1,18 +1,48 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="home w-12">
+    <button class=" fixed top-7 right-7 text-white text-xl font-style-base "> เพิ่มกลุ่ม  </button>
+
+    <button ref="NavBar" @click="showNavbar=true"  class=" fixed top-7 left-7 fill-current w-8 text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+        </svg>
+    </button>
+
+    <transition name="slide-navbar">
+      <NavBar v-if="showNavbar" 
+      v-closable="{
+        exclude: ['NavBar'],
+        handler: 'onClose'
+      }" />
+    </transition>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import NavBar from '../components/Home/NavBar.vue'
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    NavBar
+  },
+  data(){
+    return{
+      showNavbar:false
+    }
+  },
+  methods:{
+    onClose(){
+      this.showNavbar=false
+    }
   }
 }
 </script>
+<style>
+  .slide-navbar-enter-active, .slide-navbar-leave-active {
+  transition: opacity .3s;
+  }
+  .slide-navbar-enter, .slide-navbar-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+
+</style>

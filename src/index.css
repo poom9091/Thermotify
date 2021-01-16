@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;400&display=swap');
+@layer components {
+    .font-style-base{
+        @apply font-medium font-Prompt;
+    }
+    .style-icon{
+        @apply fill-current w-5 text-white inline-block;
+    }
+}
