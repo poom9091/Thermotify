@@ -1,6 +1,6 @@
 <template>
   <div class="home w-12">
-    <button class=" fixed top-7 right-7 text-white text-xl font-style-base "> เพิ่มกลุ่ม  </button>
+    <button @click="addGroup()" class=" fixed top-7 right-7 text-white text-xl font-style-base "> เพิ่มกลุ่ม  </button>
 
     <button ref="NavBar" @click="showNavbar=true"  class=" fixed top-7 left-7 fill-current w-8 text-white">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -34,6 +34,9 @@ export default {
   methods:{
     onClose(){
       this.showNavbar=false
+    },
+    addGroup(){
+      this.$router.push('/addGroup')
     }
   },
   created(){
@@ -47,11 +50,21 @@ export default {
 }
 </script>
 <style>
-  .slide-navbar-enter-active, .slide-navbar-leave-active {
-  transition: opacity .3s;
+  .slide-navbar-enter-active {
+    animation: fadeRight .3s;
   }
-  .slide-navbar-enter, .slide-navbar-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  .slide-navbar-leave-active {
+    animation: fadeRight .3s reverse ;
+  }
+  @keyframes fadeRight  {
+    0% {
     opacity: 0;
+    transform: translate(-20px) ;
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 
 </style>

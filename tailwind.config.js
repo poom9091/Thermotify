@@ -5,7 +5,10 @@ module.exports = {
     extend: {
       colors:{
         'bgcolor':'#020624',
+        'bgcolor-main':'#070417',
         'bgNavBar':'#171525',
+        'theamButton':'#1B143F',
+        'theamButton-hover':'#4533a1',
         'Logo-l':'#C69DFF',
         'Logo-r':'#4F76FF',
         'color-line':'#00C300',
