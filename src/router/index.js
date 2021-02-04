@@ -18,6 +18,10 @@ const routes = [
   {
     path: '/addGroup',
     component: () => import(/* webpackChunkName: "about" */ '../views/addGroup.vue')
+  },
+  {
+    path: '/addDevice',
+    component: () => import( '../views/addDevice.vue')
   }
 ]
 

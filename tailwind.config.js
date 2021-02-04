@@ -7,6 +7,7 @@ module.exports = {
         'bgcolor':'#020624',
         'bgcolor-main':'#070417',
         'bgNavBar':'#171525',
+        'bgGroupDevice':'#5F5F5F',
         'theamButton':'#1B143F',
         'theamButton-hover':'#4533a1',
         'Logo-l':'#C69DFF',
