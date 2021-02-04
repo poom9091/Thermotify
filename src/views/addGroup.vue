@@ -1,10 +1,10 @@
 <template>
   <div>
-      <button @click="goBack()" class=" fixed top-7 left-7 fill-current w-8 text-white">
+      <router-link to="/" class=" fixed top-7 left-7 fill-current w-8 text-white">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
           </svg>
-      </button>
+      </router-link>
 
       <div class="flex flex-col max-w-max h-screen px-7 mx-auto md:place-content-center md:pt-0 pt-24    ">
         <h1 class="text-white text-3xl font-style-base text-center">การเพิ่มกลุ่ม</h1>
@@ -28,11 +28,6 @@
 
 <script>
 export default {
-    methods:{
-        goBack(){
-            this.$router.push('/')
-        }
-    }
 }
 </script>
 

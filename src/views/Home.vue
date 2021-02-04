@@ -1,6 +1,6 @@
 <template>
   <div class="home w-12">
-    <button @click="addGroup()" class=" fixed top-7 right-7 text-white text-sm md:text-xl font-style-base "> เพิ่มกลุ่ม  </button>
+    <router-link to="/addGroup"  class=" fixed top-7 right-7 text-white text-sm md:text-xl font-style-base "> เพิ่มกลุ่ม  </router-link>
 
     <button ref="NavBar" @click="showNavbar=true"  class=" fixed top-7 left-7 fill-current w-6 md:w-8 text-white">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -42,9 +42,6 @@ export default {
     onClose(){
       this.showNavbar=false
     },
-    addGroup(){
-      this.$router.push('/addGroup')
-    }
   },
   created(){
     let userID = this.$store.getters.getUserID

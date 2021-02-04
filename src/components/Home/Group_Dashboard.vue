@@ -36,11 +36,11 @@
                         </div>
                     </button>   
                 </div>
-                <button class="transition duration-75 ease-in-out hover:bg-bgGroupDevice w-full border-dashed border-2 home-dashboard">
+                <router-link to="/addDevice" @click="this.$router.push('/addGroup')" class="transition duration-75 ease-in-out hover:bg-bgGroupDevice w-full border-dashed border-2 home-dashboard">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="fill-current w-14 mx-auto text-gray-400 font-light ">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                     </svg>
-                </button>
+                </router-link>
             </div>
         </div>
     </div>
@@ -49,6 +49,7 @@
 <script>
 
 export default {
+
     data(){
         return{
             works:[
