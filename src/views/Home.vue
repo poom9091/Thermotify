@@ -25,13 +25,17 @@
 </template>
 
 <script>
-import NavBar from '../components/Home/NavBar.vue'
-import GroupDevice from '../components/Home/Group_Dashboard.vue'
+import NavBar from '../components/Home/NavBar.vue';
+import GroupDevice from '../components/Home/Group_Dashboard.vue';
+import {mapActions} from 'vuex';
 export default {
   name: 'Home',
   components: {
     NavBar,
     GroupDevice
+  },
+  mounted(){
+        this.getSensor();
   },
   data(){
     return{
@@ -42,6 +46,7 @@ export default {
     onClose(){
       this.showNavbar=false
     },
+    ...mapActions(["getSensor"])
   },
   created(){
     let userID = this.$store.getters.getUserID
@@ -49,8 +54,7 @@ export default {
     if(userID == 'null'){
       this.$router.push('/login')
     }
-  }
-  
+  },  
 }
 </script>
 <style>
