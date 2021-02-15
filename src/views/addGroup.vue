@@ -7,15 +7,15 @@
       </router-link>
 
       <div class="flex flex-col max-w-max h-screen px-7 mx-auto md:place-content-center md:pt-0 pt-24    ">
-        <h1 class="text-white text-3xl font-style-base text-center">การเพิ่มกลุ่ม</h1>
+        <h1 class="TitleFrom">การเพิ่มกลุ่ม</h1>
         <form class=" mt-8 space-y-4 ">
             <div class=" space-y-2">
-                <p class="text-white text-lg  font-light font-style-base"> ชื่อกลุ่ม </p>
-                <input type="text" name="gname" class=" p-2 bg-gray-300 rounded-lg w-64 sm:w-80 ">
+                <p class="head-input"> ชื่อกลุ่ม </p>
+                <input type="text" name="gname" class="field-normal-input ">
             </div>
             <div class=" space-y-2">
-                <p class="text-white text-lg  font-light font-style-base"> Line Token </p>
-                <input type="text" name="gname" class=" p-2 bg-gray-300 rounded-lg w-64 sm:w-80"><br>
+                <p class="head-input"> Line Token </p>
+                <input type="text" name="gname" class=" field-normal-input"><br>
             </div>
 
             <div class=" ">
