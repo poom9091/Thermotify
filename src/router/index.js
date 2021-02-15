@@ -22,6 +22,10 @@ const routes = [
   {
     path: '/addDevice',
     component: () => import( '../views/addDevice.vue')
+  },
+  {
+    path: '/editGroup',
+    component: () => import( '../views/editGroup.vue')
   }
 ]
 
